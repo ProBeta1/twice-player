@@ -225,16 +225,16 @@ body {
     height: 150px;
   }
   8% {
-    height: 140px;
-  }
-  12% {
     height: 130px;
   }
+  12% {
+    height: 110px;
+  }
   16% {
-    height: 100px;
+    height: 90px;
   }
   20% {
-    height: 90px;
+    height: 60px;
   }
   24% {
     height: 80px;
@@ -270,22 +270,22 @@ body {
     height: 100px;
   }
   68% {
-    height: 90px;
-  }
-  72% {
     height: 80px;
   }
+  72% {
+    height: 60px;
+  }
   76% {
-    height: 70px;
+    height: 30px;
   }
   80% {
-    height: 90px;
+    height: 40px;
   }
   84% {
-    height: 100px;
+    height: 70px;
   }
   88% {
-    height: 110px;
+    height: 100px;
   }
   92% {
     height: 120px;
