@@ -60,6 +60,7 @@ function loadSong(song, songHeader) {
 
 function playSong() {
   musicContainer.classList.add("play");
+  musicBars.classList.remove("pause");
   musicBars.classList.add("play");
   playBtn.querySelector("i.fas").classList.remove("fa-play");
   playBtn.querySelector("i.fas").classList.add("fa-pause");
@@ -69,6 +70,7 @@ function playSong() {
 function pauseSong() {
   musicContainer.classList.remove("play");
   musicBars.classList.remove("play");
+  musicBars.classList.add("pause");
   playBtn.querySelector("i.fas").classList.remove("fa-pause");
   playBtn.querySelector("i.fas").classList.add("fa-play");
   audio.pause();
