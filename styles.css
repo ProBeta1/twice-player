@@ -8,11 +8,7 @@ body {
   height: 100vh;
   margin: 0;
   font-family: "Dancing Script", cursive;
-  background-image: linear-gradient(
-    0deg,
-    rgb(247, 247, 247) 25%,
-    rgb(252, 221, 221) 93%
-  );
+  background-image: linear-gradient(0deg, #1f2232 25%, #1f2232 93%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,20 +18,19 @@ body {
 .heading {
   font-size: 50px;
   margin-bottom: 150px;
-  animation: shrinkGrow 5s linear infinite;
+  animation: shrinkGrow 5s infinite;
 }
 
 @keyframes shrinkGrow {
-  0% {
+  0%,
+  100% {
     transform: scale(1);
+    color: rgb(233, 247, 247);
   }
 
   50% {
-    transform: scale(2);
-  }
-
-  100% {
-    transform: scale(1);
+    transform: scale(1.5);
+    color: rgb(115, 117, 117);
   }
 }
 
@@ -75,7 +70,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  animation: rotate 3s linear infinite;
+  animation: rotate 4s linear infinite;
   animation-play-state: paused;
 }
 
@@ -128,7 +123,7 @@ body {
   opacity: 0;
   transform: translateY(0%);
   padding: 10px 10px 10px 250px;
-  transition: transform 0.5s ease-in, opacity 0.3s ease-in;
+  transition: transform 0.5s ease-in, opacity 0.5s ease-in;
 }
 
 .music-container.play .music-info {
@@ -155,4 +150,147 @@ body {
   height: 100%;
   width: 0%;
   transition: width 0.1s linear;
+}
+
+.music-bars {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 40%;
+  max-height: 180px;
+}
+
+.bar {
+  width: 20px;
+  height: 0px;
+  background-color: rgb(53, 53, 247);
+  margin: 4px 12px;
+  animation: equalizer 4s infinite;
+  animation-play-state: paused;
+  box-shadow: 0px 0px 15px 5px #0ff, 20px 20px 20px 10px rgb(248, 32, 122);
+}
+
+.music-bars.play .bar {
+  animation-play-state: running;
+}
+
+.bar:nth-child(1) {
+  animation-duration: 1.9s;
+}
+
+.bar:nth-child(2) {
+  animation-duration: 2s;
+}
+
+.bar:nth-child(3) {
+  animation-duration: 2.3s;
+}
+
+.bar:nth-child(4) {
+  animation-duration: 2.4s;
+}
+
+.bar:nth-child(5) {
+  animation-duration: 2.1s;
+}
+
+.bar:nth-child(6) {
+  animation-duration: 1.9s;
+}
+
+.bar:nth-child(7) {
+  animation-duration: 2.1s;
+}
+
+.bar:nth-child(8) {
+  animation-duration: 1.3s;
+}
+
+.bar:nth-child(9) {
+  animation-duration: 1.4s;
+}
+
+.bar:nth-child(10) {
+  animation-duration: 2.5s;
+}
+
+@keyframes equalizer {
+  1% {
+    height: 170px;
+  }
+  4% {
+    height: 150px;
+  }
+  8% {
+    height: 140px;
+  }
+  12% {
+    height: 130px;
+  }
+  16% {
+    height: 100px;
+  }
+  20% {
+    height: 90px;
+  }
+  24% {
+    height: 80px;
+  }
+  28% {
+    height: 100px;
+  }
+  32% {
+    height: 120px;
+  }
+  36% {
+    height: 140px;
+  }
+  40% {
+    height: 150px;
+  }
+  44% {
+    height: 140px;
+  }
+  48% {
+    height: 170px;
+  }
+  52% {
+    height: 130px;
+  }
+  56% {
+    height: 120px;
+  }
+  60% {
+    height: 110px;
+  }
+  64% {
+    height: 100px;
+  }
+  68% {
+    height: 90px;
+  }
+  72% {
+    height: 80px;
+  }
+  76% {
+    height: 70px;
+  }
+  80% {
+    height: 90px;
+  }
+  84% {
+    height: 100px;
+  }
+  88% {
+    height: 110px;
+  }
+  92% {
+    height: 120px;
+  }
+  96% {
+    height: 140px;
+  }
+  100% {
+    height: 180px;
+  }
 }
