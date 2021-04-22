@@ -162,7 +162,7 @@ body {
 .bar {
   width: 20px;
   height: 0px;
-  background-color: rgb(53, 53, 247);
+  background-color: #003459;
   margin: 4px 12px;
   animation: equalizer 4s infinite;
   animation-play-state: paused;
