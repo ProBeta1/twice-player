@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: "Dancing Script", cursive;
+  background-image: linear-gradient(
+    0deg,
+    rgb(247, 247, 247) 25%,
+    rgb(252, 221, 221) 93%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  font-size: 50px;
+  margin-bottom: 150px;
+  animation: shrinkGrow 5s linear infinite;
+}
+
+@keyframes shrinkGrow {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(2);
+  }
+}
+
+.music-container {
+  background-color: azure;
+  border-radius: 20px;
+  box-shadow: 0 20px 20px 0 rgba(252, 170, 170, 0.8);
+  display: flex;
+  padding: 50px 50px;
+  position: relative;
+  margin: 100px 0;
+  z-index: 10;
+}
+
+.img-container {
+  position: relative;
+  width: 250px;
+}
+
+.img-container::after {
+  content: "";
+  background-color: antiquewhite;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  left: 50%;
+  bottom: 150%;
+  border-radius: 50%;
+  transform: translate(-50%, -150%);
+}
+
+.img-container img {
+  width: inherit;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: rotate 3s linear infinite;
+  animation-play-state: paused;
+}
+
+.music-container.play .img-container img {
+  animation-play-state: running;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.action-btn {
+  border: 0;
+  background-color: aliceblue;
+  color: rgb(243, 175, 93);
+  font-size: 23px;
+  cursor: pointer;
+  padding: 10px;
+  margin: 0 20px;
+}
+
+.action-btn-big {
+  font-size: 30px;
+  color: rgb(78, 252, 194);
+}
+.action-btn:focus {
+  outline: 0;
+}
+
+.music-info {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 15px 15px 15px 15px;
+  position: absolute;
+  top: 0;
+  left: 45px;
+  width: calc(100% - 40px);
+  opacity: 0;
+  transform: translateY(0%);
+  padding: 10px 10px 10px 250px;
+  transition: transform 0.5s ease-in, opacity 0.3s ease-in;
+}
+
+.music-container.play .music-info {
+  opacity: 1;
+  transform: translateY(-180%) skewY(15deg);
+}
+
+.music-info h2 {
+  margin: 0;
+}
+
+.progress-container {
+  background: rgb(255, 255, 255);
+  border-radius: 6px;
+  cursor: crosshair;
+  margin: 10px 0;
+  height: 4px;
+  width: 100%;
+}
+
+.progress {
+  background-color: burlywood;
+  border-radius: 6px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
