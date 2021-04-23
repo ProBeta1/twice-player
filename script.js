@@ -70,6 +70,7 @@ function loadSong(song, songHeader) {
 function startBeats() {
   musicBars.classList.remove("smoothen");
   musicBars.classList.add("play");
+  musicContainer.classList.add("play");
 }
 
 async function startTheSong() {
@@ -78,7 +79,6 @@ async function startTheSong() {
   setTimeout(startBeats, 2000);
   header.innerText = songHeaders[songId];
   header.classList.add("play");
-  musicContainer.classList.add("play");
 }
 
 function playSong() {
