@@ -78,6 +78,7 @@ async function startTheSong() {
   setTimeout(startBeats, 2000);
   header.innerText = songHeaders[songId];
   header.classList.add("play");
+  musicContainer.classList.add("play");
 }
 
 function playSong() {
@@ -85,7 +86,6 @@ function playSong() {
   musicBars.classList.add("smoothen");
 
   startTheSong();
-  musicContainer.classList.add("play");
 
   playBtn.querySelector("i.fas").classList.remove("fa-play");
   playBtn.querySelector("i.fas").classList.add("fa-pause");
