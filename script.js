@@ -58,10 +58,17 @@ function loadSong(song, songHeader) {
   cover.src = `images/${song}.jpeg`;
 }
 
+function startBeats() {
+  musicBars.classList.remove("smoothen");
+  musicBars.classList.add("play");
+}
+
 function playSong() {
   musicContainer.classList.add("play");
   musicBars.classList.remove("pause");
-  musicBars.classList.add("play");
+  musicBars.classList.add("smoothen");
+  setTimeout(startBeats, 2000);
+
   playBtn.querySelector("i.fas").classList.remove("fa-play");
   playBtn.querySelector("i.fas").classList.add("fa-pause");
 
