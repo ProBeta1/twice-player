@@ -52,11 +52,16 @@ const songHeaders = [
 
 let songId = 0;
 
+initialHeaderSet();
+
+function initialHeaderSet() {
+  header.innerText = "Welcome to my world";
+}
+
 loadSong(songs[songId], songHeaders[songId]);
 
 function loadSong(song, songHeader) {
   title.innerText = song;
-  header.innerText = "Loading ...";
   audio.src = `music/${song}.mp3`;
   audio.preload = "auto";
   cover.src = `images/${song}.jpeg`;
@@ -68,6 +73,7 @@ function startBeats() {
 }
 
 async function startTheSong() {
+  header.innerText = "Loading ...";
   await audio.play();
   setTimeout(startBeats, 2000);
   header.innerText = songHeaders[songId];
