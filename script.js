@@ -45,7 +45,7 @@ const songs = ["scorpion", "kurakura", "drum"];
 const songHeaders = [
   "Over night, over night ... kitto itsuka wa I will find you ..",
   "Lose control of my heart and soul (Magic)...",
-  "Got no peak, I got no summit, I'm not average, I don't sum it",
+  "Dum, dee-dum-dum ... Watch the drum go dum ..",
 ];
 
 let songId = 0;
@@ -67,7 +67,7 @@ function startBeats() {
 
 async function startTheSong() {
   await audio.play();
-  setTimeout(startBeats, 1000);
+  setTimeout(startBeats, 2000);
 }
 
 function playSong() {
