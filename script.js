@@ -56,7 +56,7 @@ loadSong(songs[songId], songHeaders[songId]);
 
 function loadSong(song, songHeader) {
   title.innerText = song;
-  header.innerText = songHeader;
+  header.innerText = "Loading ...";
   audio.src = `music/${song}.mp3`;
   audio.preload = "auto";
   cover.src = `images/${song}.jpeg`;
@@ -70,6 +70,8 @@ function startBeats() {
 async function startTheSong() {
   await audio.play();
   setTimeout(startBeats, 2000);
+  header.innerText = songHeaders[songId];
+  header.classList.add("play");
 }
 
 function playSong() {
@@ -86,6 +88,8 @@ function pauseSong() {
   musicContainer.classList.remove("play");
   musicBars.classList.remove("play");
   musicBars.classList.add("pause");
+  header.innerText = "Paused";
+  header.classList.remove("play");
   playBtn.querySelector("i.fas").classList.remove("fa-pause");
   playBtn.querySelector("i.fas").classList.add("fa-play");
   audio.pause();

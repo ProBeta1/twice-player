@@ -19,6 +19,11 @@ body {
   font-size: 50px;
   margin-bottom: 150px;
   animation: shrinkGrow 5s infinite;
+  animation-play-state: paused;
+}
+
+.heading.play {
+  animation-play-state: running;
 }
 
 @keyframes shrinkGrow {
