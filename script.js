@@ -50,7 +50,7 @@ const songHeaders = [
   "Barsega saawan jhoom jhoom ke",
 ];
 
-let songId = 0;
+let songId = 2;
 
 initialHeaderSet();
 
@@ -64,6 +64,7 @@ function loadSong(song, songHeader) {
   title.innerText = song;
   audio.src = `music/${song}.mp3`;
   audio.preload = "auto";
+  audio.loop = true;
   cover.src = `images/${song}.jpeg`;
 }
 
