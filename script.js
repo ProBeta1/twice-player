@@ -67,6 +67,7 @@ function startBeats() {
 
 async function startTheSong() {
   await audio.play();
+  setTimeout(startBeats, 2000);
 }
 
 function playSong() {
@@ -75,7 +76,6 @@ function playSong() {
   musicBars.classList.add("smoothen");
 
   startTheSong();
-  setTimeout(startBeats, 2000);
 
   playBtn.querySelector("i.fas").classList.remove("fa-play");
   playBtn.querySelector("i.fas").classList.add("fa-pause");
