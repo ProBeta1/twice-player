@@ -41,11 +41,13 @@ const cover = document.querySelector("#cover");
 //   }
 // }
 
-const songs = ["scorpion", "kurakura", "drum"];
+const songs = ["scorpion", "kurakura", "drum", "sham", "aaoge"];
 const songHeaders = [
   "Over night, over night ... kitto itsuka wa I will find you ..",
   "Lose control of my heart and soul (Magic)...",
   "Dum, dee-dum-dum ... Watch the drum go dum ..",
+  "Ke boom-boom-boom para.. para...Hai khamosh dono",
+  "Barsega saawan jhoom jhoom ke",
 ];
 
 let songId = 0;

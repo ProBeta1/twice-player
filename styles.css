@@ -319,6 +319,9 @@ body {
   40% {
     height: 80px;
   }
+  50% {
+    height: 60px;
+  }
 }
 
 @keyframes freeze {
