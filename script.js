@@ -65,17 +65,20 @@ function startBeats() {
   musicBars.classList.add("play");
 }
 
+async function startTheSong() {
+  await audio.play();
+}
+
 function playSong() {
   musicContainer.classList.add("play");
   musicBars.classList.remove("pause");
   musicBars.classList.add("smoothen");
+
+  startTheSong();
   setTimeout(startBeats, 2000);
 
   playBtn.querySelector("i.fas").classList.remove("fa-play");
   playBtn.querySelector("i.fas").classList.add("fa-pause");
-
-  console.log(audio);
-  audio.play();
 }
 function pauseSong() {
   musicContainer.classList.remove("play");
