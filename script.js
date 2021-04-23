@@ -81,11 +81,11 @@ async function startTheSong() {
 }
 
 function playSong() {
-  musicContainer.classList.add("play");
   musicBars.classList.remove("pause");
   musicBars.classList.add("smoothen");
 
   startTheSong();
+  musicContainer.classList.add("play");
 
   playBtn.querySelector("i.fas").classList.remove("fa-play");
   playBtn.querySelector("i.fas").classList.add("fa-pause");
