@@ -56,6 +56,7 @@ function loadSong(song, songHeader) {
   title.innerText = song;
   header.innerText = songHeader;
   audio.src = `music/${song}.mp3`;
+  audio.preload = "auto";
   cover.src = `images/${song}.jpeg`;
 }
 
@@ -73,6 +74,7 @@ function playSong() {
   playBtn.querySelector("i.fas").classList.remove("fa-play");
   playBtn.querySelector("i.fas").classList.add("fa-pause");
 
+  console.log(audio);
   audio.play();
 }
 function pauseSong() {
