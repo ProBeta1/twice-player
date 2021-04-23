@@ -67,7 +67,7 @@ function startBeats() {
 
 async function startTheSong() {
   await audio.play();
-  setTimeout(startBeats, 2000);
+  setTimeout(startBeats, 1000);
 }
 
 function playSong() {

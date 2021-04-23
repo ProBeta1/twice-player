@@ -174,7 +174,7 @@ body {
 }
 
 .music-bars.smoothen .bar {
-  animation: start-smooth 2s;
+  animation: start-smooth 3s infinite;
 }
 
 .music-bars.pause .bar {
