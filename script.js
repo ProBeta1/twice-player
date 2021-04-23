@@ -41,10 +41,11 @@ const cover = document.querySelector("#cover");
 //   }
 // }
 
-const songs = ["scorpion", "kurakura"];
+const songs = ["scorpion", "kurakura", "drum"];
 const songHeaders = [
   "Over night, over night ... kitto itsuka wa I will find you ..",
   "Lose control of my heart and soul (Magic)...",
+  "Got no peak, I got no summit, I'm not average, I don't sum it",
 ];
 
 let songId = 0;
