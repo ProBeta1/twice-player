@@ -30,12 +30,12 @@ body {
   0%,
   100% {
     transform: scale(1);
-    color: rgb(233, 247, 247);
+    color: rgb(115, 117, 117);
   }
 
   50% {
     transform: scale(1.5);
-    color: rgb(115, 117, 117);
+    color: rgb(233, 247, 247);
   }
 }
 
