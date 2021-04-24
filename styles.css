@@ -75,7 +75,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  animation: rotate 4s linear infinite;
+  animation: rotate 3s linear infinite;
   animation-play-state: paused;
 }
 
@@ -169,7 +169,7 @@ body {
   height: 0px;
   background-color: #003459;
   margin: 4px 12px;
-  animation: equalizer 4s infinite;
+  animation: symphony 3s infinite;
   animation-play-state: paused;
   box-shadow: 0px 0px 15px 5px #0ff, 20px 20px 20px 10px rgb(248, 32, 122);
 }
@@ -226,21 +226,41 @@ body {
   animation-duration: 2.5s;
 }
 
+.bar:nth-child(11) {
+  animation-duration: 1.9s;
+}
+
+.bar:nth-child(12) {
+  animation-duration: 2s;
+}
+
+.bar:nth-child(31) {
+  animation-duration: 2.3s;
+}
+
+.bar:nth-child(14) {
+  animation-duration: 2.4s;
+}
+
+.bar:nth-child(15) {
+  animation-duration: 2.1s;
+}
+
 @keyframes equalizer {
   1% {
     height: 100px;
   }
   4% {
-    height: 120px;
+    height: 80px;
   }
   8% {
     height: 140px;
   }
   12% {
-    height: 120px;
+    height: 180px;
   }
   16% {
-    height: 90px;
+    height: 190px;
   }
   20% {
     height: 70px;
@@ -273,37 +293,118 @@ body {
     height: 120px;
   }
   60% {
-    height: 110px;
+    height: 150px;
   }
   64% {
-    height: 100px;
+    height: 120px;
   }
   68% {
-    height: 80px;
+    height: 180px;
   }
   72% {
-    height: 60px;
+    height: 220px;
   }
   76% {
-    height: 30px;
+    height: 200px;
   }
   80% {
-    height: 40px;
+    height: 130px;
   }
   84% {
     height: 70px;
   }
   88% {
-    height: 100px;
-  }
-  92% {
     height: 120px;
   }
+  92% {
+    height: 190px;
+  }
   96% {
-    height: 140px;
+    height: 230px;
   }
   100% {
+    height: 220px;
+  }
+}
+
+@keyframes symphony {
+  1% {
+    height: 100px;
+  }
+  4% {
+    height: 90px;
+  }
+  8% {
+    height: 80px;
+  }
+  12% {
+    height: 100px;
+  }
+  16% {
+    height: 110px;
+  }
+  20% {
+    height: 120px;
+  }
+  24% {
+    height: 130px;
+  }
+  28% {
+    height: 120px;
+  }
+  32% {
+    height: 130px;
+  }
+  36% {
+    height: 140px;
+  }
+  40% {
+    height: 150px;
+  }
+  44% {
+    height: 160px;
+  }
+  48% {
+    height: 170px;
+  }
+  52% {
     height: 180px;
+  }
+  56% {
+    height: 50px;
+  }
+  60% {
+    height: 80px;
+  }
+  64% {
+    height: 90px;
+  }
+  68% {
+    height: 140px;
+  }
+  72% {
+    height: 180px;
+  }
+  76% {
+    height: 170px;
+  }
+  80% {
+    height: 160px;
+  }
+  84% {
+    height: 150px;
+  }
+  88% {
+    height: 200px;
+  }
+  92% {
+    height: 230px;
+  }
+  96% {
+    height: 220px;
+  }
+  100% {
+    height: 240px;
   }
 }
 
@@ -344,5 +445,65 @@ body {
   }
   40% {
     height: 10px;
+  }
+}
+
+.bottom-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 90%;
+}
+
+.dj-container {
+  width: 220px;
+  /* margin-bottom: -10px; */
+}
+
+#dj1 {
+  width: inherit;
+  height: 420px;
+  object-fit: cover;
+  animation: bloat1 1s infinite;
+  animation-play-state: paused;
+  box-shadow: 0px 0px 25px 5px rgb(3, 121, 121);
+  align-self: flex-end;
+}
+
+#dj1.play {
+  animation-play-state: running;
+  box-shadow: 0px 0px 25px 10px #0ff;
+}
+
+#dj2 {
+  width: inherit;
+  height: 420px;
+  object-fit: cover;
+  animation: bloat2 1s infinite;
+  animation-play-state: paused;
+  box-shadow: 0px 0px 25px 5px rgb(3, 121, 121);
+}
+
+#dj2.play {
+  animation-play-state: running;
+  box-shadow: 0px 0px 25px 10px #0ff;
+}
+
+@keyframes bloat1 {
+  35% {
+    opacity: 0.8;
+  }
+  75% {
+    transform: translateY(-4%);
+  }
+}
+
+@keyframes bloat2 {
+  35% {
+    opacity: 0.8;
+  }
+  75% {
+    transform: translateY(-4%);
   }
 }

@@ -1,5 +1,7 @@
 const header = document.querySelector(".heading");
 const musicContainer = document.querySelector(".music-container");
+const dj1 = document.querySelector("#dj1");
+const dj2 = document.querySelector("#dj2");
 const musicBars = document.querySelector(".music-bars");
 const bar = document.querySelector(".bar");
 const playBtn = document.querySelector("#play");
@@ -72,6 +74,8 @@ function startBeats() {
   musicBars.classList.remove("smoothen");
   musicBars.classList.add("play");
   musicContainer.classList.add("play");
+  dj1.classList.add("play");
+  dj2.classList.add("play");
 }
 
 async function startTheSong() {
@@ -93,9 +97,11 @@ function playSong() {
 }
 function pauseSong() {
   musicContainer.classList.remove("play");
+  dj1.classList.remove("play");
+  dj2.classList.remove("play");
   musicBars.classList.remove("play");
   musicBars.classList.add("pause");
-  header.innerText = "Paused";
+  header.innerText = "Paused  :(";
   header.classList.remove("play");
   playBtn.querySelector("i.fas").classList.remove("fa-pause");
   playBtn.querySelector("i.fas").classList.add("fa-play");
